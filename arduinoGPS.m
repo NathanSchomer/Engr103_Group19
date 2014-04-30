@@ -1,4 +1,4 @@
-comPort = '/dev/tty.Osiris-DevA';
+comPort = '/dev/tty.usbmodem1411';
 
 if (~exist('serialFlag','var'))
     [arduino.s,serialFlag] = setupSerial(comPort)
@@ -12,4 +12,3 @@ while (true)
     fprintf('Long: %f%s\n', lng, lngD);
     pause(0.5);
 end
-

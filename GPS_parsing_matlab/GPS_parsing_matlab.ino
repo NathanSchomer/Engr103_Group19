@@ -8,7 +8,7 @@ char im[80];              //incoming message from GPS
 char incoming_char = 0;   //hold caracter from GPS
 int count = 0;            //length of message
 
-SoftwareSerial gps(2,3);  //pins 4 and 5
+SoftwareSerial gps(10,11);  
 
 float lat;  //latitude
 char latD;  //latitude direction
@@ -54,7 +54,7 @@ void loop(){
          
          char lngBuffer[10];
          for(int i = 0; i < 10; i++)
-           lngBuffer[0+i] = im[17+i];
+           lngBuffer[0+i] = im[29+i];
          lng = atof(lngBuffer);
          
          lngD = im[40];
